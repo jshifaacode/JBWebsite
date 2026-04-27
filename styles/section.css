@@ -43,17 +43,22 @@
 
 @media (max-width: 768px) {
   .project-card-new {
-    padding: 1.5rem;
-    gap: 1.5rem;
+    padding: 1.2rem;
+    gap: 1rem;
   }
-  .pcn-info h3 { font-size: 1.4rem; }
+  .pcn-info h3 { font-size: 1.3rem; }
   .slider-btn {
     width: 36px;
     height: 36px;
     font-size: 0.75rem;
   }
-  .slider-prev { left: -4px; }
-  .slider-next { right: -4px; }
+  .slider-prev { left: 0; }
+  .slider-next { right: 0; }
+}
+
+@media (max-width: 480px) {
+  .slider-prev { left: 0; }
+  .slider-next { right: 0; }
 }
 
 @media (min-width: 769px) {
@@ -85,6 +90,12 @@
 
 .contact-left-col {
   min-width: 0;
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+  .pcn-overlay { display: none; }
+  .cert-thumb-overlay { display: none; }
 }
 
 body * { transition-property: background-color, border-color, color, box-shadow; transition-duration: 0.3s; }
