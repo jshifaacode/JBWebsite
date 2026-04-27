@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHIFA'S WEBSITE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Nunito:wght@300;400;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="styles/style.css"/>
+  <link rel="stylesheet" href="styles/section.css"/>
+</head>
+<body>
+
+
+<div id="loading-screen">
+  <canvas id="loading-canvas"></canvas>
+  <div class="loading-content">
+    <div class="loading-petals-ring">
+      <span>🌸</span><span>✿</span><span>🌸</span><span>✿</span><span>🌸</span><span>✿</span>
+    </div>
+    <div class="loading-logo">JB</div>
+    <div class="loading-welcome">Welcome</div>
+    <div class="loading-sub">JB Website ✦</div>
+    <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
+    <div class="loading-dots"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-jb">JB</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about-section">About</a></li>
+    <li><a href="#skill-section">Skills</a></li>
+    <li><a href="#project-section">Projects</a></li>
+    <li><a href="#achievement-section">Achievment</a></li>
+    <li><a href="#contact-section">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="audio-toggle" id="audioToggle" title="Musik">
+      <i class="fa-solid fa-music" id="audioIcon"></i>
+    </button>
+    <button class="theme-toggle" id="themeToggle" title="Toggle tema">
+      <i class="fa-solid fa-sun" id="themeIcon"></i>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose"><i class="fa-solid fa-xmark"></i></button>
+  <div class="mobile-nav-logo">✿ SHIFA ✿</div>
+  <ul>
+    <li><a href="#hero" onclick="closeMobileNav()"><span class="mnav-num">01</span>HOME</a></li>
+    <li><a href="#about-section" onclick="closeMobileNav()"><span class="mnav-num">02</span>ABOUT</a></li>
+    <li><a href="#skill-section" onclick="closeMobileNav()"><span class="mnav-num">03</span>SKILLS</a></li>
+    <li><a href="#project-section" onclick="closeMobileNav()"><span class="mnav-num">04</span>PROJECTS</a></li>
+    <li><a href="#achievement-section" onclick="closeMobileNav()"><span class="mnav-num">05</span>CERTS</a></li>
+    <li><a href="#contact-section" onclick="closeMobileNav()"><span class="mnav-num">06</span>CONTACT</a></li>
+  </ul>
+  <div class="mobile-nav-footer">© 2025 Jayshifa Banyuwana 🌸</div>
+</div>
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+
+<section class="hero" id="hero">
+  <canvas id="sakuraCanvas"></canvas>
+  <div class="hero-floats">
+    <div class="hf hf1">🌸</div>
+    <div class="hf hf2">✿</div>
+    <div class="hf hf3">🌷</div>
+    <div class="hf hf4">🌸</div>
+    <div class="hf hf5">✦</div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Available for Work ✦</span>
+    </div>
+    <div class="hero-title-wrap">
+      <h1 class="hero-title"><span id="typing-hero-text"></span><span class="cursor">|</span></h1>
+    </div>
+    <div class="hero-cursive">Banyuwana</div>
+    <div class="hero-pills">
+      <span class="pill"><i class="fa-solid fa-code"></i> Web Developer</span>
+      <span class="pill-sep">·</span>
+      <span class="pill"><i class="fa-solid fa-film"></i> Editor</span>
+      <span class="pill-sep">·</span>
+      <span class="pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Digital Creator</span>
+    </div>
+    <p class="hero-quote">"Belajarlah hari ini, berbanggalah di kemudian hari."</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="counter" data-target="11">0</span><span>+</span><small>Sertifikat</small></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><span class="counter" data-target="7">0</span><span>+</span><small>Client Puas</small></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><span class="counter" data-target="5">0</span><span>+</span><small>Keahlian</small></div>
+    </div>
+    <div class="hero-ctas">
+      <button class="btn-primary" onclick="document.getElementById('about-section').scrollIntoView({behavior:'smooth'})">
+        <strong>✦ ABOUT ME</strong>
+        <div id="container-stars">
+          <div id="stars"></div>
+        </div>
+        <div id="glow">
+          <div class="btn-glow-circle"></div>
+          <div class="btn-glow-circle"></div>
+        </div>
+      </button>
+      <a href="https://drive.google.com/file/d/10xuAwThL2aJOpyIEoVPtN7QYqxBwuYMD/view?usp=drivesdk" class="btn-ghost" id="cvBtn" target="_blank">
+        <i class="fa-solid fa-download"></i> Unduh CV
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-image-wrap">
+      <div class="hero-image-ring"></div>
+      <div class="hero-image-ring2"></div>
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/anm-shifa.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-sparkles">
+        <span class="hs hs1">✦</span><span class="hs hs2">✿</span><span class="hs hs3">🌸</span><span class="hs hs4">✦</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="about-section" id="about-section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-label">✿ TENTANG SAYA ✿</span>
+      <h2 class="section-title">About <span class="highlight">Me</span></h2>
+    </div>
+    <div class="about-layout">
+      <div class="about-left" data-aos>
+        <div class="image-container" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-perspective="800" data-tilt-scale="1.05">
+          <div class="image-inner">
+            <img src="assets/fotojayshifaprofilweb.jpg" alt="Jayshifa Banyuwana"/>
+            <div class="img-deco img-deco1">🌸</div>
+            <div class="img-deco img-deco2">✦</div>
+            <div class="img-deco img-deco3">✿</div>
+          </div>
+        </div>
+        <div class="about-quick-info">
+          <div class="aqi-card"><i class="fa-solid fa-location-dot"></i><div><span class="aqi-label">Lokasi</span><span class="aqi-value">Bogor, Jawa Barat</span></div></div>
+          <div class="aqi-card"><i class="fa-solid fa-graduation-cap"></i><div><span class="aqi-label">Pendidikan</span><span class="aqi-value">SMKN 1 Ciomas</span></div></div>
+          <div class="aqi-card"><i class="fa-solid fa-laptop-code"></i><div><span class="aqi-label">Jurusan</span><span class="aqi-value">Software & Game Dev</span></div></div>
+        </div>
+      </div>
+      <div class="about-right" data-aos>
+        <p class="about-tagline">JAYSHIFA BANYUWANA</p>
+        <div class="about-desc">
+          <p>Seorang <b>multitasker</b> di dunia digital yang suka menggabungkan teknik coding dengan kreativitas visual. Memiliki skillset yang cukup luas, mulai dari <b>Front-End Dev</b>, <b>UI/UX Design</b>, <b>Digital Art</b> dan <b>Animasi 2D</b>, serta <b>Editing</b> video dan foto yang berbasis di Bogor, Jawa Barat.</p>
+          <p>Saat ini, menempuh pendidikan <b>Software and Game Development</b> di <b>SMKN 1 Ciomas</b>. Ketertarikan saya pada teknologi dan seni visual mendorong saya untuk terus bereksperimen dengan berbagai platform kreatif guna menghasilkan karya yang fungsional namun tetap estetis.</p>
+        </div>
+        <div class="about-tags">
+          <span class="etag"><i class="fa-solid fa-code"></i> Front-End Dev</span>
+          <span class="etag"><i class="fa-solid fa-pen-ruler"></i> UI/UX</span>
+          <span class="etag"><i class="fa-solid fa-palette"></i> Digital Art</span>
+          <span class="etag"><i class="fa-solid fa-film"></i> Video Editing</span>
+          <span class="etag"><i class="fa-solid fa-wand-magic-sparkles"></i> Animasi 2D</span>
+        </div>
+        <div class="about-stats-row">
+          <div class="ast-card"><span>11+</span><small>Sertifikat</small></div>
+          <div class="ast-card"><span>7+</span><small>Client Puas</small></div>
+          <div class="ast-card"><span>3+</span><small>Tahun Belajar</small></div>
+        </div>
+        <a href="https://drive.google.com/file/d/10xuAwThL2aJOpyIEoVPtN7QYqxBwuYMD/view?usp=drivesdk" class="btn-download" id="cvDownload" target="_blank">
+          <i class="fa-solid fa-download"></i> UNDUH CV
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="skill-section" id="skill-section">
+  <div class="skill-bg-deco">
+    <div class="skdeco1">🌸</div><div class="skdeco2">✿</div><div class="skdeco3">🌷</div>
+  </div>
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-label">✿ KEAHLIAN ✿</span>
+      <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+      <p class="section-sub">Kombinasi kemampuan teknis dan kreatif yang terus berkembang 🌸</p>
+    </div>
+
+    
+    <div class="skill-cards-grid" data-aos>
+      <div class="skill-card" data-percent="80">
+        <div class="skill-card-inner">
+          <div class="skill-ring"><svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="40"/><circle class="ring-fill" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" data-pct="80"/></svg><div class="skill-ring-icon"><i class="fa-solid fa-code"></i></div></div>
+          <div class="skill-card-name">Web Dev</div>
+          <div class="skill-card-pct">80%</div>
+        </div>
+      </div>
+      <div class="skill-card" data-percent="75">
+        <div class="skill-card-inner">
+          <div class="skill-ring"><svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="40"/><circle class="ring-fill" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" data-pct="75"/></svg><div class="skill-ring-icon"><i class="fa-solid fa-pen-nib"></i></div></div>
+          <div class="skill-card-name">UI/UX Design</div>
+          <div class="skill-card-pct">75%</div>
+        </div>
+      </div>
+      <div class="skill-card" data-percent="85">
+        <div class="skill-card-inner">
+          <div class="skill-ring"><svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="40"/><circle class="ring-fill" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" data-pct="85"/></svg><div class="skill-ring-icon"><i class="fa-solid fa-palette"></i></div></div>
+          <div class="skill-card-name">Digital Art</div>
+          <div class="skill-card-pct">85%</div>
+        </div>
+      </div>
+      <div class="skill-card" data-percent="90">
+        <div class="skill-card-inner">
+          <div class="skill-ring"><svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="40"/><circle class="ring-fill" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" data-pct="90"/></svg><div class="skill-ring-icon"><i class="fa-solid fa-film"></i></div></div>
+          <div class="skill-card-name">Video Editing</div>
+          <div class="skill-card-pct">90%</div>
+        </div>
+      </div>
+      <div class="skill-card" data-percent="88">
+        <div class="skill-card-inner">
+          <div class="skill-ring"><svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="40"/><circle class="ring-fill" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2" data-pct="88"/></svg><div class="skill-ring-icon"><i class="fa-solid fa-laptop-code"></i></div></div>
+          <div class="skill-card-name">Software</div>
+          <div class="skill-card-pct">88%</div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sw-tabs-wrapper" data-aos>
+      <div class="sw-tabs">
+        <button class="sw-tab active" data-tab="administrative">Administrative</button>
+        <button class="sw-tab" data-tab="development">Development</button>
+        <button class="sw-tab" data-tab="design">Design</button>
+        <button class="sw-tab" data-tab="creative">Creative</button>
+        <button class="sw-tab" data-tab="programming">Programming</button>
+        <button class="sw-tab" data-tab="adobe">Adobe & Art</button>
+      </div>
+
+      <div class="sw-panel active" id="tab-administrative">
+        <div class="sw-grid">
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#2b579a"><img src="https://cdn.simpleicons.org/microsoftword/2B579A" alt="Word"/></div><span>Microsoft Word</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#217442"><img src="https://cdn.simpleicons.org/microsoftexcel/217442" alt="Excel"/></div><span>Microsoft Excel</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#d24416"><img src="https://cdn.simpleicons.org/microsoftpowerpoint/D24416" alt="PowerPoint"/></div><span>PowerPoint</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#1a73e8"><img src="https://cdn.simpleicons.org/google/1a73e8" alt="Google"/></div><span>Google Workspace</span></div>
+        </div>
+      </div>
+      <div class="sw-panel" id="tab-development">
+        <div class="sw-grid">
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#007acc"><img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VSCode"/></div><span>VS Code</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#f05032"><img src="https://cdn.simpleicons.org/github/C3638D" alt="GitHub"/></div><span>Git / GitHub</span></div>
+        </div>
+      </div>
+      <div class="sw-panel" id="tab-design">
+        <div class="sw-grid">
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#f24000"><img src="https://cdn.simpleicons.org/figma/F24000" alt="Figma"/></div><span>Figma</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#00c4cc"><img src="https://cdn.simpleicons.org/canva/00C4CC" alt="Canva"/></div><span>Canva</span></div>
+        </div>
+      </div>
+      <div class="sw-panel" id="tab-creative">
+        <div class="sw-grid">
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#000"><img src="https://cdn.simpleicons.org/capcut/C3638D" alt="CapCut"/></div><span>CapCut</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#ff6d3b"><i class="fa-solid fa-wand-magic-sparkles" style="color:#ff6d3b;font-size:2rem"></i></div><span>Alight Motion</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#e91e8c"><i class="fa-solid fa-camera-retro" style="color:#e91e8c;font-size:2rem"></i></div><span>Hypic</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#ff6fab"><i class="fa-solid fa-star-half-stroke" style="color:#ff6fab;font-size:2rem"></i></div><span>Wink</span></div>
+        </div>
+      </div>
+      <div class="sw-panel" id="tab-programming">
+        <div class="sw-grid">
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#f7df1e"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JS"/></div><span>JavaScript</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#1572b6"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS"/></div><span>CSS</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#777bb4"><img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP"/></div><span>PHP</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#ff2d20"><img src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel"/></div><span>Laravel</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#339933"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node"/></div><span>Node.js</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#7952b3"><img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap"/></div><span>Bootstrap</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#3178c6"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TS"/></div><span>TypeScript</span></div>
+        </div>
+      </div>
+      <div class="sw-panel" id="tab-adobe">
+        <div class="sw-grid">
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#31a8ff"><img src="https://cdn.simpleicons.org/adobephotoshop/31A8FF" alt="PS"/></div><span>Photoshop</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#ff9a00"><img src="https://cdn.simpleicons.org/adobeillustrator/FF9A00" alt="AI"/></div><span>Illustrator</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#2ecc71"><img src="https://cdn.simpleicons.org/coreldraw/2ECC71" alt="Corel"/></div><span>CorelDRAW</span></div>
+          <div class="sw-card"><div class="sw-icon-wrap" style="--ic:#ff6b9d"><i class="fa-solid fa-pen-fancy" style="color:#ff6b9d;font-size:2rem"></i></div><span>IbisPaint X</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="project-section" id="project-section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-label">✿ PORTOFOLIO ✿</span>
+      <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+      <p class="section-sub">Website yang telah saya kerjakan dengan penuh dedikasi 💖</p>
+    </div>
+
+    <div class="project-slider-wrap" data-aos>
+      <div class="project-slider" id="projectSlider">
+        
+        <div class="project-slide">
+          <div class="project-card-new">
+            <div class="pcn-thumb">
+              <img src="https://i.ibb.co.com/gG4zzNV/Screenshot-2026-04-22-202903.png" alt="JBCalc"/>
+              <div class="pcn-overlay">
+                <a href="https://github.com/jshifaacode/jbcalc" target="_blank" rel="noopener" class="pcn-btn pcn-btn-gh">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://jbcalc.netlify.app/" target="_blank" rel="noopener" class="pcn-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                </a>
+              </div>
+            </div>
+            <div class="pcn-info">
+              <div class="pcn-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <h3>JBCalc ✦</h3>
+              <p>Kalkulator interaktif dengan antarmuka yang responsif, mulai dari perhitungan dasar hingga yang kompleks.</p>
+              <div class="pcn-action-btns">
+                <a href="https://github.com/jshifaacode/jbcalc" target="_blank" rel="noopener" class="pcn-action-btn pcn-action-gh"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://jbcalc.netlify.app/" target="_blank" rel="noopener" class="pcn-action-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a>
+              </div>
+              <div class="pcn-number">01</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-slide">
+          <div class="project-card-new">
+            <div class="pcn-thumb">
+              <img src="https://i.ibb.co.com/DD2112Q6/Screenshot-2026-04-22-203816.png" alt="Nanas Madu"/>
+              <div class="pcn-overlay">
+                <a href="https://github.com/jshifaacode/nanasmadumangedi" target="_blank" rel="noopener" class="pcn-btn pcn-btn-gh">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://nanasmadumangedi.netlify.app" target="_blank" rel="noopener" class="pcn-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                </a>
+              </div>
+            </div>
+            <div class="pcn-info">
+              <div class="pcn-tags"><span>JSON</span><span>CSS</span><span>JavaScript</span></div>
+              <h3>Nanas Madu Mang Edi ✦</h3>
+              <p>Website profil company untuk UMKM lokal Bogor — desain elegan dan user friendly.</p>
+              <div class="pcn-action-btns">
+                <a href="https://github.com/jshifaacode/nanasmadumangedi" target="_blank" rel="noopener" class="pcn-action-btn pcn-action-gh"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://nanasmadumangedi.netlify.app" target="_blank" rel="noopener" class="pcn-action-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a>
+              </div>
+              <div class="pcn-number">02</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-slide">
+          <div class="project-card-new">
+            <div class="pcn-thumb">
+              <img src="https://i.ibb.co.com/23cvngM4/Screenshot-2026-04-22-210041.png" alt="The Licious"/>
+              <div class="pcn-overlay">
+                <a href="https://github.com/jshifaacode/the-licious" target="_blank" rel="noopener" class="pcn-btn pcn-btn-gh">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://the-licious.netlify.app/" target="_blank" rel="noopener" class="pcn-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> View
+                </a>
+              </div>
+            </div>
+            <div class="pcn-info">
+              <div class="pcn-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <h3>The Licious ✦</h3>
+              <p>Website profil company untuk UMKM kuliner dengan tampilan modern dan menggugah selera.</p>
+              <div class="pcn-action-btns">
+                <a href="https://github.com/jshifaacode/the-licious" target="_blank" rel="noopener" class="pcn-action-btn pcn-action-gh"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://the-licious.netlify.app/" target="_blank" rel="noopener" class="pcn-action-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View</a>
+              </div>
+              <div class="pcn-number">03</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <button class="slider-btn slider-prev" id="projPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-btn slider-next" id="projNext"><i class="fa-solid fa-chevron-right"></i></button>
+
+      
+      <div class="slider-dots" id="projDots">
+        <span class="sdot active" data-i="0"></span>
+        <span class="sdot" data-i="1"></span>
+        <span class="sdot" data-i="2"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="achievement-section" id="achievement-section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-label">✿ PENCAPAIAN ✿</span>
+      <h2 class="section-title">My <span class="highlight">Achievements</span></h2>
+      <p class="section-sub">Sertifikat dan penghargaan yang telah saya raih 🏆</p>
+    </div>
+
+    <div class="cert-slider-wrap" data-aos>
+      <div class="cert-slider" id="certSlider">
+        <div class="cert-slide"><a href="https://drive.google.com/file/d/1Lf_VRsN06qNYhhw7EDSmvr2RLn1nN52Y/view?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/pengimbasan.jpeg" alt="Pengimbasan Master Trainer 2024" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Pengimbasan Master Trainer 2024</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/file/d/1h0UL7LzE2_7MnIh9WMZcAIET09csnMPJ/view?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/literasi-keuangan.jpeg" alt="Literasi Keuangan" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Literasi Keuangan</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/file/d/1v53Ct4lByNZS7byU-FCAeSx-fLdjmSyL/view?usp=drivesdk" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/financial-literacy-dicoding.jpeg" alt="Literasi Keuangan Dicoding" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Financial Literacy Dicoding</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/1bQdOOW1j1-jk7oacbT63QSslg_QQCpmZ?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/backend.jpeg" alt="Back-End dengan JavaScript" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Back-End dengan JavaScript</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/19xc30Qtp7hT3jS7DmrWQxKHW2pw1u_bu?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/pemrograman-web.jpeg" alt="Dasar Pemrograman Web" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Dasar Pemrograman Web</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/1XxVU154C9p5gyZPcY6qA1kLrW4_UxR1k?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/pengembang-software.jpeg" alt="Dasar Pemrograman Software Developer" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Dasar Pemrograman Software Developer</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/1wL7HgW2IiMO2dhIwMSO3ghq_Cc7AI9N4?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/github.jpeg" alt="Dasar Git dengan GitHub" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Dasar Git dengan GitHub</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/16sw4z98TcH6YMHShBSdkxF6oKropWxeL?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/frontend.jpeg" alt="Fundamental Front-End Web Dev" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Fundamental Front-End Web Dev</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/1O1H0aTGKG1zU11tAm7LCiJyn1xBqeuvK?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/logika.jpeg" alt="Logika Pemrograman 101" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Logika Pemrograman 101</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/19asIrhdNwaB9T1Pxbx4Z2q1JqOgxkkcS?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/js.jpeg" alt="Dasar Pemrograman JavaScript" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Dasar Pemrograman JavaScript</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/drive/folders/1VxHM0hDj8ipy-XA0rF1rlKY5VzBfkrUJ?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/membuat-frontend.jpeg" alt="Membuat Front-End Web" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Membuat Front-End Web</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/file/d/1CbNGU8XlTS0WTXhmcKCt4G7M2kBVpG7s/view?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/koordinator-lapangan.jpeg" alt="Koordinator Lapangan" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">ACHIEVEMENT</div><p>Koordinator Lapangan</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+        <div class="cert-slide"><a href="https://drive.google.com/file/d/12MUoP9lNJEnjHOYn9RNU8COJJNBmoK39/view?usp=sharing" target="_blank" class="cert-card-new"><div class="cert-thumb-wrap"><img src="assets/msword.jpeg" alt="Microsoft Word" class="cert-thumb"/><div class="cert-thumb-overlay"><i class="fa-solid fa-expand"></i></div></div><div class="cert-badge">SERTIFIKAT</div><p>Microsoft Word</p><div class="cert-link-hint"><i class="fa-brands fa-google-drive"></i> Lihat</div></a></div>
+      </div>
+
+      <button class="slider-btn slider-prev" id="certPrev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-btn slider-next" id="certNext"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="slider-dots" id="certDots"></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact-section" class="contact-section">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <span class="section-label">✿ HUBUNGI SAYA ✿</span>
+      <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+      <p class="section-sub">Terhubung bersama saya — atau kirim pesan langsung! 💌</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-left-col">
+        <div class="contact-info-card">
+          <div class="contact-icon-ring"><i class="fa-solid fa-paper-plane"></i></div>
+          <h3>Siap untuk berkolaborasi? 🌸</h3>
+          <p>Jangan ragu untuk menghubungi saya melalui media sosial atau kirim pesan langsung. Saya terbuka untuk projek baru, diskusi kreatif, atau sekadar menyapa!</p>
+          <div class="contact-details">
+            <div class="contact-detail-item"><i class="fa-solid fa-location-dot"></i><span>Bogor, Jawa Barat</span></div>
+            <div class="contact-detail-item"><i class="fa-solid fa-graduation-cap"></i><span>SMKN 1 Ciomas</span></div>
+          </div>
+        </div>
+        <div class="social-ticker-wrap">
+          <div class="social-ticker-label">✦ Find Me On</div>
+          <div class="social-ticker">
+            <div class="social-ticker-track">
+              <a href="mailto:jayshifabanyuwana@gmail.com" class="sticker-item" style="--clr:#ff4d6d"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+              <a href="https://discordapp.com/users/1266949672208039990" class="sticker-item" style="--clr:#5865f2" target="_blank"><i class="fa-brands fa-discord"></i><span>Discord</span></a>
+              <a href="https://www.instagram.com/jbanyu1a_" class="sticker-item" style="--clr:#e4405f" target="_blank"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+              <a href="https://www.tiktok.com/@jayshifabanyuwana" class="sticker-item" style="--clr:#000" target="_blank"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a>
+              <a href="https://youtube.com/@jshif44b?si=38nuf4xwpreYrRTE" class="sticker-item" style="--clr:#ff0000" target="_blank"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+              <a href="https://github.com/jshifaacode" class="sticker-item" style="--clr:#c3638d" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+              <a href="https://www.linkedin.com/in/jayshifa-banyuwana-8a5334283" class="sticker-item" style="--clr:#0077b5" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span></a>
+
+              <a href="mailto:jayshifabanyuwana@gmail.com" class="sticker-item" style="--clr:#ff4d6d"><i class="fa-solid fa-envelope"></i><span>Email</span></a>
+              <a href="https://discordapp.com/users/1266949672208039990" class="sticker-item" style="--clr:#5865f2" target="_blank"><i class="fa-brands fa-discord"></i><span>Discord</span></a>
+              <a href="https://www.instagram.com/jbanyu1a_" class="sticker-item" style="--clr:#e4405f" target="_blank"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+              <a href="https://www.tiktok.com/@jayshifabanyuwana" class="sticker-item" style="--clr:#000" target="_blank"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a>
+              <a href="https://youtube.com/@jshif44b?si=38nuf4xwpreYrRTE" class="sticker-item" style="--clr:#ff0000" target="_blank"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a>
+              <a href="https://github.com/jshifaacode" class="sticker-item" style="--clr:#c3638d" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+              <a href="https://www.linkedin.com/in/jayshifa-banyuwana-8a5334283" class="sticker-item" style="--clr:#0077b5" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right-col">
+      <div class="contact-form-card">
+        <h3 class="form-title"><i class="fa-solid fa-envelope-open-text"></i> Kirim Pesan 💌</h3>
+        <p class="form-subtitle">Pesan kamu akan langsung terkirim ke email saya ✉️</p>
+        <form id="contact-form" class="cform">
+          <input type="hidden" name="access_key" value="663cfc35-b6e0-4efa-963d-58240e964fa9"/>
+          <input type="hidden" name="subject" id="hidden-subject" value="Pesan baru dari Portfolio — Jayshifa"/>
+          <input type="hidden" name="from_name" value="Jayshifa Portfolio"/>
+          <input type="hidden" name="replyto" id="cf-replyto" value=""/>
+          <input type="checkbox" name="botcheck" style="display:none"/>
+          <div class="cform-row">
+            <div class="cform-group"><label for="cf-name">Nama 🌸</label><input type="text" id="cf-name" name="name" placeholder="Nama kamu..."/></div>
+            <div class="cform-group"><label for="cf-email">Email</label><input type="email" id="cf-email" name="email" placeholder="email@kamu.com"/></div>
+          </div>
+          <div class="cform-group"><label for="cf-subject">Subjek</label><input type="text" id="cf-subject" name="subject_field" placeholder="Tentang apa?"/></div>
+          <div class="cform-group"><label for="cf-message">Pesan 💌</label><textarea id="cf-message" name="message" rows="5" placeholder="Tuliskan pesanmu di sini..."></textarea></div>
+          <button type="button" id="cf-submit" class="btn-send"><span class="btn-send-text"><i class="fa-solid fa-paper-plane"></i> Kirim Pesan</span><span class="btn-send-loading" style="display:none"><i class="fa-solid fa-spinner fa-spin"></i> Mengirim...</span></button>
+          <div id="cf-status" class="cf-status"></div>
+        </form>
+      </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom" data-aos>
+      <div class="footer-sakura">🌸 ✿ 🌷 ✦ 🌸</div>
+      <p>© 2025 <span class="highlight">Jayshifa Banyuwana</span>. Made with 💖 & lots of cherry blossoms.</p>
+    </div>
+  </div>
+</section>
+
+<audio id="bgAudio" src="assets/wavetoearth-seasons.mp3" loop preload="auto"></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/section.js"></script>
+<script src="scripts/contact.js"></script>
+</body>
+</html>
