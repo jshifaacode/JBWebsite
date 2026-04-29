@@ -71,3 +71,61 @@ sparkStyle.textContent = `
   }
 `;
 document.head.appendChild(sparkStyle);
+
+(function () {
+  const container = document.querySelector('.image-container');
+  if (!container) return;
+  const inner = container.querySelector('.image-inner');
+  if (!inner) return;
+
+  const TILT_MAX = 10;
+  let rafId = null;
+  let hovering = false;
+
+  function tilt(rx, ry) {
+    inner.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.03)`;
+  }
+
+  function reset() {
+    inner.style.transition = 'transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+    inner.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+    setTimeout(() => { inner.style.transition = ''; }, 650);
+  }
+
+  function onMove(cx, cy) {
+    const r = container.getBoundingClientRect();
+    const rx = -((cy - r.top)  / r.height - 0.5) * TILT_MAX * 2;
+    const ry =  ((cx - r.left) / r.width  - 0.5) * TILT_MAX * 2;
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      inner.style.transition = 'none';
+      tilt(rx, ry);
+    });
+  }
+
+ 
+  container.addEventListener('mouseenter', () => { hovering = true; });
+  container.addEventListener('mousemove', (e) => { if (hovering) onMove(e.clientX, e.clientY); });
+  container.addEventListener('mouseleave', () => { hovering = false; cancelAnimationFrame(rafId); reset(); });
+
+
+  container.addEventListener('touchstart', (e) => {
+    hovering = true;
+    onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  container.addEventListener('touchmove', (e) => {
+    if (hovering) onMove(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+  container.addEventListener('touchend', () => { hovering = false; cancelAnimationFrame(rafId); reset(); });
+
+  
+  function flash() {
+    inner.classList.remove('flash-click');
+    void inner.offsetWidth;
+    inner.classList.add('flash-click');
+    setTimeout(() => inner.classList.remove('flash-click'), 600);
+  }
+
+  container.addEventListener('click', flash);
+  container.addEventListener('touchend', flash);
+})();
