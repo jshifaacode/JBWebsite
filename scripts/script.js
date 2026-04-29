@@ -224,7 +224,9 @@ function initSlider(sliderEl, prevBtn, nextBtn, dotsEl, visibleCount = 1) {
   function goTo(i) {
     current = Math.max(0, Math.min(i, maxIdx));
     const slideWidth = 100 / visibleCount;
-    sliderEl.style.transform = `translateX(-${current * slideWidth}%)`;
+    const isRTL = document.documentElement.dir === 'rtl';
+    const offset = isRTL ? current * slideWidth : -current * slideWidth;
+    sliderEl.style.transform = `translateX(${offset}%)`;
     updateDots();
   }
 
@@ -258,8 +260,14 @@ function initSlider(sliderEl, prevBtn, nextBtn, dotsEl, visibleCount = 1) {
     if (!isDragging) return;
     isDragging = false;
     const dx = e.clientX - startX;
-    if (dx < -50) next();
-    else if (dx > 50) prev();
+    const isRTL = document.documentElement.dir === 'rtl';
+    if (isRTL) {
+      if (dx > 50) next();
+      else if (dx < -50) prev();
+    } else {
+      if (dx < -50) next();
+      else if (dx > 50) prev();
+    }
   });
 }
 
