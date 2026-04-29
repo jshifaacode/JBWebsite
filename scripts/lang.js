@@ -517,6 +517,14 @@ function applyLang(code) {
 
   window.__currentLangErrors = { errRequired: t.errRequired, errEmail: t.errEmail, successMsg: t.successMsg, failMsg: t.failMsg, connErr: t.connErr };
 
+  // Reset slider ke posisi 0 saat RTL/LTR berganti
+  requestAnimationFrame(() => {
+    ['projectSlider', 'certSlider'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.transform = 'translateX(0%)';
+    });
+  });
+
   const langBtn = document.getElementById('langToggle');
   if (langBtn) {
     langBtn.querySelector('.lang-flag').textContent = meta.flag;
